@@ -7,7 +7,12 @@
 }
 
 * {
+    /* Default font */
     font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2{
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -29,10 +34,6 @@ main {
     }
 }
 
-h1, h2, h3{
-    font-family: 'Roboto', sans-serif;
-}
-
 img {
     border-radius: 50%;
     border: 1px solid var(--dark-purple);
@@ -47,9 +48,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     & > * {
         margin: 0 1em;
+        text-align: center;
     }
 }
 
@@ -99,8 +102,13 @@ footer {
         width: 80%;
     }
 
-    .header-container > * {
-        margin: 0 3em;
+    .header-container {
+        flex-direction: row;
+
+        & > * {
+            margin: 0 3em;
+            text-align: left;
+        }
     }
 
     footer {
@@ -110,5 +118,11 @@ footer {
         & a {
             margin: 0 1.5em;
         }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        width: 57%;
     }
 }
