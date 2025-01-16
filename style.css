@@ -91,6 +91,10 @@ footer {
         &:hover {
             color: var(--very-light-purple);
         }
+
+        &:active {
+            color: var(--light-purple);
+        }
     }
 }
 
