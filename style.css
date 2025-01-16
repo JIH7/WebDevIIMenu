@@ -1,5 +1,28 @@
+:root {
+    /* These colors come from the Google Material design dark mode guidelines. */
+    --bg-color: #121212;
+    --very-light-purple: #EFE5FD;
+    --light-purple: #BB86FC;
+    --dark-purple: #6002EE;
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--very-light-purple);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * + *{
+        margin-block-start: 1.8em;
+    }
 }
 
 h1, h2, h3{
@@ -8,21 +31,33 @@ h1, h2, h3{
 
 img {
     border-radius: 50%;
-    float: left;
+    border: 1px solid var(--dark-purple);
+
+    /* Force image to maintain aspect ratio within flex container */
+    height: 100%;
+
+    -webkit-user-drag: none;
 }
 
-header {
-    overflow: auto;
-    clear: left;
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+        margin: 0 1em;
+    }
 }
 
 table {
     border-collapse: collapse;
+
+    border-radius: 1em;
 }
 
 tr > * {
-    border: 1px solid black;
-    padding: .3em;
+    border: 1px solid white;
+    padding: .3em .6em;
 }
 
 td {
@@ -30,5 +65,21 @@ td {
 
     & + td {
         text-align: left;
+    }
+}
+
+footer a {
+    text-decoration: none;
+
+    transition: color .2s;
+
+    color: var(--light-purple);
+
+    &:visited {
+        color: var(--dark-purple);
+    }
+
+    &:hover {
+        color: var(--very-light-purple);
     }
 }
