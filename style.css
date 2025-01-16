@@ -38,9 +38,6 @@ img {
     border-radius: 50%;
     border: 1px solid var(--dark-purple);
 
-    /* Force image to maintain aspect ratio within flex container */
-    height: 100%;
-
     -webkit-user-drag: none;
 }
 
