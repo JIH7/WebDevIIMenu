@@ -1,0 +1,34 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    border-radius: 50%;
+    float: left;
+}
+
+header {
+    overflow: auto;
+    clear: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr > * {
+    border: 1px solid black;
+    padding: .3em;
+}
+
+td {
+    text-align: right;
+
+    & + td {
+        text-align: left;
+    }
+}
