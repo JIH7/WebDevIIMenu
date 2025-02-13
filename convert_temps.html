@@ -8,10 +8,17 @@
     <main>
         <h1>Convert from Fahrenheit to Celsius</h1>
         <script>
-            let tempF = prompt("Enter Fahrenheit tempurature: ");
+            // Collect user input and parse as a float
+            let tempF = parseFloat(prompt("Enter Fahrenheit tempurature: "));
+
+            // Handle conversion.
             let tempC = (tempF - 32) * (5 / 9);
+
+            // Round both temps to one decimal
             tempF = Math.round(tempF * 10) / 10;
-            tempC = Math.round(tempC * 10) / 10;    
+            tempC = Math.round(tempC * 10) / 10;  
+            
+            // Add the output to the document
             document.write(`<span>${tempF} F = ${tempC} C</span>`);
         </script>
     </main>
