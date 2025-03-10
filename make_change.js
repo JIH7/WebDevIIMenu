@@ -1,3 +1,5 @@
+"use strict";
+
 const $ = selector => document.querySelector(selector);
 
 // The $ function made me want to do a cool, programmery arrow function as well 😎
@@ -8,7 +10,7 @@ const processEntry = () => {
 }
 
 // makeChange takes a value in cents, then performs a sequence of division and modulus operations to determine each coin
-function makeChange(cents) {
+const makeChange = (cents) => {
     let quarters = parseInt(cents / 25); // Get the quarters by dividing by 25
     cents = cents % 25; // Get the remaining cents
     $("#quarters").value = quarters;
